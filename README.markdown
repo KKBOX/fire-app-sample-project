@@ -1,6 +1,6 @@
 # Fire.app
 
-[Fire.app][compassapp] is a **menubar only app** for fast HTML prototyping.
+[Fire.app][fireapp] is a **menubar only app** for fast HTML prototyping.
 
 Fire.app is written in **Java (JRuby)**, and works in mac, linux and pc.
 
@@ -19,7 +19,4 @@ Fire.app is written in **Java (JRuby)**, so you must install JRE(Java Runtime En
 Copyright (c) 2012 Handlino Inc.
 Licensed under GPL v2.
 
-[compassapp]: http://compass.handlino.com/
-[compassapp-github]: http://github.com/handlino/compassapp
-[sass]: http://sass-lang.com/
-[compass]: http://compass-style.org/
+[fireapp]: http://fireapp.handlino.com/
