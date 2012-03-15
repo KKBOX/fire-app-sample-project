@@ -1,8 +1,25 @@
-[Compass.app][compassapp] is a [Sass][sass]/[Compass][compass] app. It helps designers compile stylesheets easily without resorting to command line interface. It is a cross-platform software written in Java, and works in OS X/Windows/Linux.
+# Fire.app
 
-[Compass.app][compassapp] 2.0 supports ERB/Haml templates. You can write layouts, partials, and helpers. (Just like a Rails/Sinatra application!)
+[Fire.app][compassapp] is a **menubar only app** for fast HTML prototyping.
 
+Fire.app is written in **Java (JRuby)**, and works in mac, linux and pc.
+
+## System Requirement
+
+Fire.app has been tested in:
+
+* Windows: Windows 7/Vista/XP
+* OS X: 10.5, 10.6 32/64bit, 10.7 32/64bit
+* Linux: Arch Linux 32/64bit
+
+Fire.app is written in **Java (JRuby)**, so you must install JRE(Java Runtime Environment) first. If you do not have JRE installed, Fire.app will guide you to install it first.
+
+## License
+
+Copyright (c) 2012 Handlino Inc.
+Licensed under GPL v2.
 
 [compassapp]: http://compass.handlino.com/
+[compassapp-github]: http://github.com/handlino/compassapp
 [sass]: http://sass-lang.com/
 [compass]: http://compass-style.org/
