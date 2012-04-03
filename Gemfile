@@ -1,5 +1,4 @@
 source :rubygems
-
 gem 'serve', :git => "git://github.com/tka/serve.git"
 gem 'thin'
 # Use edge instead:
@@ -20,6 +19,6 @@ gem 'compass'
 # gem 'less'
 
 # Coffee Script
-gem 'rack-coffee'
+gem 'rack-coffee', :git => "git://github.com/tka/rack-coffee"
 # Use mongrel for the Web server
 # gem 'mongrel'

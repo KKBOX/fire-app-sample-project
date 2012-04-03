@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'bundler'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -12,6 +13,8 @@ end
 
 require 'serve'
 require 'serve/rack'
+require "rack/coffee"
+
 
 # The project root directory
 root = ::File.dirname(__FILE__)
@@ -25,24 +28,32 @@ if ENV['RACK_ENV'] != 'production'
   require 'compass'
   
   Compass.add_project_configuration( Compass.detect_configuration_file(root) )
-  puts  Compass.detect_configuration_file(root) 
   Compass.configure_sass_plugin!
   
   use Sass::Plugin::Rack  # Sass Middleware
 end
 
+
+puts  File.join(root, 'coffeescripts')
+puts Compass.configuration.http_javascripts_path
+
 # Other Rack Middleware
 use Rack::ShowStatus      # Nice looking 404s and other messages
 use Rack::ShowExceptions  # Nice looking errors
 
+use Rack::Coffee, { 
+  :root => File.join(root, 'coffeescripts'), 
+  :urls => Compass.configuration.http_javascripts_path
+}
+
 # Rack Application
 if ENV['SERVER_SOFTWARE'] =~ /passenger/i
   # Passenger only needs the adapter
-  run Serve::RackAdapter.new(root + '/views')
+  run Serve::RackAdapter.new( root )
 else
   # Use Rack::Cascade and Rack::Directory on other platforms for static assets
   run Rack::Cascade.new([
-    Serve::RackAdapter.new(root ),
-    Rack::Directory.new(root )
+    Serve::RackAdapter.new( root ),
+    Rack::Directory.new( root )
   ])
 end
