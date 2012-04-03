@@ -34,9 +34,6 @@ if ENV['RACK_ENV'] != 'production'
 end
 
 
-puts  File.join(root, 'coffeescripts')
-puts Compass.configuration.http_javascripts_path
-
 # Other Rack Middleware
 use Rack::ShowStatus      # Nice looking 404s and other messages
 use Rack::ShowExceptions  # Nice looking errors
