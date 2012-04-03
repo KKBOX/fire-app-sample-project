@@ -2,3 +2,8 @@ Thumbs.db
 .DS_Store
 *~
 .sass-cache
+Gemfile.lock
+compass_app_log.txt
+document_root
+tmp
+.bundle

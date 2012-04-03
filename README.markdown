@@ -14,6 +14,11 @@ Fire.app has been tested in:
 
 Fire.app is written in **Java (JRuby)**, so you must install JRE(Java Runtime Environment) first. If you do not have JRE installed, Fire.app will guide you to install it first.
 
+## Heruko
+
+* heroku create -s cedar
+* git push heruko master
+
 ## License
 
 Copyright (c) 2012 Handlino Inc.
