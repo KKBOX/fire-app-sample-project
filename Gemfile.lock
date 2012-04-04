@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tka/rack-coffee
-  revision: 8b9987f845ac42b5ca277f7eefc33fc7a870f0b9
+  revision: aef16a7ea20a12cd479d83ccde1de23b204b196c
   specs:
     rack-coffee (1.0.0)
       coffee-script
