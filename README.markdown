@@ -11,7 +11,7 @@ Fire.app is a **menubar only app** for fast HTML prototyping.
 ## How To Run On Heroku
 
 * heroku create -s cedar
-* git push heruko master
+* git push heroku master
 
 ## License
 
